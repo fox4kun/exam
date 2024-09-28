@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امتحان معمارية الحاسوب</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            direction: rtl;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 30px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>امتحان معمارية الحاسوب</h1>
+
+    <form id="examForm">
+        <!-- True or False Questions -->
+        <div class="question">
+            <p>1. هناك نوع واحد فقط من المعالجات في الحاسوب.</p>
+            <label><input type="radio" name="q1" value="false"> خطأ</label>
+            <label><input type="radio" name="q1" value="true"> صحيح</label>
+        </div>
+
+        <div class="question">
+            <p>2. المتحكم هو الجزء المسؤول عن تنسيق عمليات وتوجيه الحاسوب.</p>
+            <label><input type="radio" name="q2" value="true"> صحيح</label>
+            <label><input type="radio" name="q2" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>3. يتم دائمًا تخزين البيانات في ذاكرة الوصول العشوائي (RAM).</p>
+            <label><input type="radio" name="q3" value="false"> خطأ</label>
+            <label><input type="radio" name="q3" value="true"> صحيح</label>
+        </div>
+
+        <div class="question">
+            <p>4. الباص (Bus) هو القناة التي تنقل البيانات بين مكونات الحاسوب.</p>
+            <label><input type="radio" name="q4" value="true"> صحيح</label>
+            <label><input type="radio" name="q4" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>5. التنفيذ المتوازي (Parallel Execution) يشير إلى قدرة الحاسوب على تنفيذ أكثر من مهمة في نفس الوقت.</p>
+            <label><input type="radio" name="q5" value="true"> صحيح</label>
+            <label><input type="radio" name="q5" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>6. وحدة المعالجة المركزية (CPU) هي الجزء الذي ينفذ العمليات الرياضية والمنطقية.</p>
+            <label><input type="radio" name="q6" value="true"> صحيح</label>
+            <label><input type="radio" name="q6" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>7. ذاكرة القراءة فقط (ROM) تحتفظ بالبيانات بشكل دائم ولا يمكن تعديلها.</p>
+            <label><input type="radio" name="q7" value="true"> صحيح</label>
+            <label><input type="radio" name="q7" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>8. تكوين الحاسوب يشير إلى ترتيب المكونات الفعلية في الجهاز.</p>
+            <label><input type="radio" name="q8" value="true"> صحيح</label>
+            <label><input type="radio" name="q8" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>9. ذاكرة الكاش (Cache) هي نوع من الذاكرة السريعة التي تخزن البيانات المؤقتة لتسريع عمليات الوصول إلى الذاكرة الرئيسية.</p>
+            <label><input type="radio" name="q9" value="true"> صحيح</label>
+            <label><input type="radio" name="q9" value="false"> خطأ</label>
+        </div>
+
+        <div class="question">
+            <p>10. وحدة معالجة الرسومات (GPU) تستخدم لتنفيذ العمليات الرسومية والتحسينات البصرية في الحاسوب.</p>
+            <label><input type="radio" name="q10" value="true"> صحيح</label>
+            <label><input type="radio" name="q10" value="false"> خطأ</label>
+        </div>
+
+        <!-- Multiple Choice Questions -->
+        <div class="question">
+            <p>11. الهدف الرئيسي لتقنية Pipelining في الحاسوب هو:</p>
+            <label><input type="radio" name="q11" value="a"> زيادة سرعة تنفيذ العمليات</label>
+            <label><input type="radio" name="q11" value="b"> زيادة حجم الذاكرة</label>
+            <label><input type="radio" name="q11" value="c"> زيادة عرض النطاق الترددي</label>
+            <label><input type="radio" name="q11" value="d"> زيادة عدد العمليات القابلة للتنفيذ في وقت واحد</label>
+        </div>
+
+        <div class="question">
+            <p>12. مصطلح "Data Hazard" في Pipelining يعني:</p>
+            <label><input type="radio" name="q12" value="a"> بيانات تعارض</label>
+            <label><input type="radio" name="q12" value="b"> توقيتي تعارض</label>
+            <label><input type="radio" name="q12" value="c"> تحكمي تعارض</label>
+            <label><input type="radio" name="q12" value="d"> هوية تعارض</label>
+        </div>
+
+        <div class="question">
+            <p>13. مصطلح "Instruction Pipeline" في معمارية الحاسوب يشير إلى:</p>
+            <label><input type="radio" name="q13" value="a"> سلسلة من التعليمات التي تنفذ في الوقت نفسه</label>
+            <label><input type="radio" name="q13" value="b"> تقنية لتوزيع الإشارات</label>
+            <label><input type="radio" name="q13" value="c"> تقنية لتوزيع الطاقة</label>
+            <label><input type="radio" name="q13" value="d"> سلسلة من مراحل تنفيذ التعليمات</label>
+        </div>
+
+        <div class="question">
+            <p>14. الهدف من استخدام "Instruction Cache" في Pipelining هو:</p>
+            <label><input type="radio" name="q14" value="a"> تخزين البيانات المؤقتة</label>
+            <label><input type="radio" name="q14" value="b"> تسريع تنفيذ التعليمات</label>
+            <label><input type="radio" name="q14" value="c"> تحسين توجيه التعليمات</label>
+            <label><input type="radio" name="q14" value="d"> زيادة سرعة الذاكرة</label>
+        </div>
+
+        <div class="question">
+            <p>15. مصطلح "Pipeline Stall" في Pipelining يعني:</p>
+            <label><input type="radio" name="q15" value="a"> توقف مؤقت في تنفيذ التعليمات</label>
+            <label><input type="radio" name="q15" value="b"> زيادة عدد مراحل البايبلاين</label>
+            <label><input type="radio" name="q15" value="c"> انتقال البيانات عبر الأنابيب</label>
+            <label><input type="radio" name="q15" value="d"> تخزين البيانات المؤقتة</label>
+        </div>
+
+        <button type="button" onclick="calculateResults()">انهاء الامتحان</button>
+    </form>
+
+    <div id="result" class="result"></div>
+
+    <table id="resultTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>السؤال</th>
+                <th>إجابتك</th>
+                <th>الإجابة الصحيحة</th>
+            </tr>
+        </thead>
+        <tbody id="resultTableBody">
+        </tbody>
+    </table>
+
+    <script>
+        function calculateResults() {
+            const answers = {
+                q1: 'false',  // الإجابة الصحيحة للسؤال 1
+                q2: 'true',   // الإجابة الصحيحة للسؤال 2
+                q3: 'false',  // الإجابة الصحيحة للسؤال 3
+                q4: 'true',   // الإجابة الصحيحة للسؤال 4
+                q5: 'true',   // الإجابة الصحيحة للسؤال 5
+                q6: 'true',   // الإجابة الصحيحة للسؤال 6
+                q7: 'true',   // الإجابة الصحيحة للسؤال 7
+                q8: 'true',   // الإجابة الصحيحة للسؤال 8
+                q9: 'true',   // الإجابة الصحيحة للسؤال 9
+                q10: 'true',  // الإجابة الصحيحة للسؤال 10
+                q11: 'a',     // الإجابة الصحيحة للسؤال 11
+                q12: 'a',     // الإجابة الصحيحة للسؤال 12
+                q13: 'd',     // الإجابة الصحيحة للسؤال 13
+                q14: 'b',     // الإجابة الصحيحة للسؤال 14
+                q15: 'a'      // الإجابة الصحيحة للسؤال 15
+            };
+
+            let score = 0;
+            const form = document.forms['examForm'];
+            const resultTableBody = document.getElementById('resultTableBody');
+            resultTableBody.innerHTML = '';  // تصفية الجدول
+
+            for (const question in answers) {
+                const userAnswer = form[question].value;
+                const correctAnswer = answers[question];
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${question}</td>
+                    <td>${userAnswer || 'بدون إجابة'}</td>
+                    <td>${correctAnswer}</td>
+                `;
+                resultTableBody.appendChild(row);
+
+                if (userAnswer === correctAnswer) {
+                    score++;
+                }
+            }
+
+            const totalQuestions = Object.keys(answers).length;
+            document.getElementById('result').innerHTML = `نتيجتك: ${score} من ${totalQuestions}`;
+            document.getElementById('resultTable').style.display = 'table';
+        }
+    </script>
+
+</body>
+                     </html>
